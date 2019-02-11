@@ -30,11 +30,22 @@ public:
     virtual bool die(); 
 
 protected:
+<<<<<<< HEAD
 	string critterType_; // type of critter (ant or Doodlebug
 	int age_; //number of steps
 	int x_; 
 	int y_; 
 	bool dead_; 
+=======
+	virtual void move();
+	virtual void breed();
+   	virtual void die(); 
+
+private:
+	int age_;
+	int location_; //stores x, y coordinates of the critter
+
+>>>>>>> ae15ad625fd3a6fd5cdb12f6f4fc853e8bc16c79
 }; 
 
 #endif //CRITTER_HPP
