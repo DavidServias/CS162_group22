@@ -25,9 +25,9 @@ public:
 	int getLoc();
 
 protected:
-	virtual move();
-	virtual breed();
-    virtual die(); 
+	virtual void move();
+	virtual void breed();
+   	virtual void die(); 
 
 private:
 	int age_;
