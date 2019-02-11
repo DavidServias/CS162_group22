@@ -13,7 +13,7 @@
 #include <iomanip>
 #include <cstdio>
 #include <tuple>
-
+using std::string;
 
 class Critter {
 public:
@@ -25,12 +25,12 @@ public:
 	int getLoc(); // https://stackoverflow.com/questions/321068/returning-multiple-values-from-a-c-function	
 	string getType;
 	void setType(string type);
-	virtual void move();
+	virtual void move(int x, int y);
 	virtual void breed();
     virtual bool die(); 
 
 protected:
-	string type_; // type of critter (ant or Doodlebug
+	string critterType_; // type of critter (ant or Doodlebug
 	int age_; //number of steps
 	int x_; 
 	int y_; 

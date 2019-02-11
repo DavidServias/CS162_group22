@@ -9,7 +9,6 @@
 
 
 
-public:
 Critter::Critter(int x, int y) {
 	type_ = " ";
 	age_ = -1;
@@ -22,7 +21,7 @@ Critter::~Critter() {
 }
 
 void Critter::setAge(int age) {
-	age_ = age
+	age_ = age;
 }
 
 void Critter::setLoc(int x, int y) {
@@ -39,11 +38,11 @@ int Critter::getAge() {
 }
 
 string getType() {
-	return type_;
+	return critterType_ ;
 }
 
 void setType(string type) {
-	type_ = type;
+	critterType_ = type;
 }
 
 void Critter::move(int x, int y) {
