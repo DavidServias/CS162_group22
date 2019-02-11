@@ -29,11 +29,11 @@ PROGS = ${PROG1}
 
 # make all
 all:
-    ${CXX} ${CXXFLAGS} ${SRCS} -o ${PROG1}
+	${CXX} ${CXXFLAGS} ${SRCS} -o ${PROG1}
 
 # make clean
 clean:
-    rm -f ${PROGS} *.o *~
+	rm -f ${PROGS} *.o *~
 
 # run program with valgrind
 valgrind:
