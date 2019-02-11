@@ -1,5 +1,5 @@
 /*****************************************************************************************************************
-* Author: CS162 group 22 (Kadeem Wyllie, Shon Camarlinghi, David Servias)
+* Author: CS162 group 22
 * Date: 2/8/2019
 * Description: declaration for Critter base class
 ****************************************************************************************************************/
@@ -20,19 +20,21 @@ public:
 	Critter();
 	~Critter();
 	void setAge(int age);
-	void setLoc(int x, int y); //https://stackoverflow.com/questions/321068/returning-multiple-values-from-a-c-function
+	void setLoc(int x, int y); 
 	int getAge();
-	int getLoc();
+	int getLoc(); // https://stackoverflow.com/questions/321068/returning-multiple-values-from-a-c-function	
+	string getType;
+	void setType(string type);
+	virtual void move();
+	virtual void breed();
+    virtual bool die(); 
 
 protected:
-	virtual move();
-	virtual breed();
-    virtual die(); 
-
-private:
-	int age_;
-	int location_; //stores x, y coordinates of the critter
-
+	string type_; // type of critter (ant or Doodlebug
+	int age_; //number of steps
+	int x_; 
+	int y_; 
+	bool dead_; 
 }; 
 
 #endif //CRITTER_HPP
